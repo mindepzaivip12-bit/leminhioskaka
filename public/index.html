@@ -4,16 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <title>TOOL AUTO LC79</title>
-<link rel="stylesheet" href="/css/style.css">
+<!-- Đã sửa: Bỏ dấu / ở đầu href -->
+<link rel="stylesheet" href="css/style.css">
 <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- HEADER -->
   <div class="header">
     <div class="logo">
-      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <!-- Đã sửa: Thêm width="58" height="58" để fix lỗi phóng to -->
+      <svg viewBox="0 0 64 64" width="58" height="58" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="#5b8cff"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#3b82f6"/>
@@ -45,7 +46,6 @@
 
   <div class="grid">
     <div>
-      <!-- LOGIN -->
       <div class="card" id="loginCard">
         <div class="card-head">
           <div class="ico"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div>
@@ -60,7 +60,6 @@
         <div class="msg" id="loginMsg"></div>
       </div>
 
-      <!-- DASHBOARD -->
       <div class="card hidden" id="dashCard">
         <div class="card-head">
           <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg></div>
@@ -68,8 +67,8 @@
         </div>
 
         <div class="pills">
-          <span class="pill off" id="pillConn"><span class="d"></span><span id="txtConn">Offline</span></span>
-          <span class="pill off" id="pillAuto"><span class="d"></span><span id="txtAuto">AUTO · OFF</span></span>
+          <span class="pill" id="pillConn"><span class="d"></span><span id="txtConn">Offline</span></span>
+          <span class="pill" id="pillAuto"><span class="d"></span><span id="txtAuto">AUTO · OFF</span></span>
         </div>
 
         <div class="big-pred">
@@ -86,7 +85,7 @@
         <div class="stats">
           <div class="stat"><span class="k">Nickname</span><span class="v" id="sNick">—</span></div>
           <div class="stat"><span class="k">Số dư</span><span class="v" id="sBalance">0</span></div>
-          <div class="stat"><span class="k">Cược phiên</span><span class="v" id="sBet">10,000</span></div>
+          <div class="stat"><span class="k">Cược phiên</span><span class="v" id="sBet">0</span></div>
           <div class="stat"><span class="k">Bet step</span><span class="v" id="sStep">GỐC</span></div>
           <div class="stat"><span class="k">Win / Lose</span><span class="v mono" id="sWL">0 / 0</span></div>
           <div class="stat"><span class="k">Trạng thái</span><span class="v mono" id="sStatus">Idle</span></div>
@@ -95,7 +94,7 @@
 
         <div class="field"><label>Cược gốc (min 1.000)</label>
           <div class="row">
-            <input id="betAmount" type="number" placeholder="10000" min="1000" value="10000">
+            <input id="betAmount" type="number" placeholder="10000" min="1000">
             <button class="btn btn-warn" id="btnSetBet">
               <svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
               SET
@@ -112,7 +111,6 @@
         </div>
       </div>
 
-      <!-- CẦU GẦN ĐÂY -->
       <div class="card">
         <div class="card-head">
           <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
@@ -122,7 +120,6 @@
       </div>
     </div>
 
-    <!-- RIGHT: LOG -->
     <div class="card">
       <div class="card-head">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
@@ -132,7 +129,6 @@
     </div>
   </div>
 
-  <!-- LỊCH SỬ DỰ ĐOÁN -->
   <div class="card" style="margin-top:18px">
     <div class="card-head">
       <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
@@ -170,6 +166,7 @@
   </div>
 </div>
 
-<script src="/js/app.js"></script>
+<!-- Đã sửa: Bỏ dấu / ở đầu src -->
+<script src="js/app.js"></script>
 </body>
 </html>
